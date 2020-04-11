@@ -1,4 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react';
+import axios from 'axios';
+
 
 const Context = createContext();
 
@@ -7,17 +9,20 @@ function ContextProvider(props) {
   const [data, setData] = useState(null);
 
   useEffect(()=> {
-
-  }, []);
+    axios.get('localhost:8000')
+      .then( res => {
+       
+      })
+  }, [])
 
   return (
-    <IntervalContext.Provider
-      value={{globalInterval}}
+    <Context.Provider
+      value={{data}}
     >
       { props.children }
-    </IntervalContext.Provider>
+    </Context.Provider>
   )
 }
 
-export default IntervalContext;
-export {IntervalContextProvider};
+export default Context;
+export {ContextProvider};
