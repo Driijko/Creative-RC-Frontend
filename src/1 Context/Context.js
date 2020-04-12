@@ -9,11 +9,15 @@ function ContextProvider(props) {
   const [data, setData] = useState(null);
 
   useEffect(()=> {
-    axios.get('localhost:8000')
+    axios.get('http://localhost:8000/resources')
       .then( res => {
-       
+       setData(res.data);
       })
   }, [])
+
+  // useEffect(()=> {
+  //   console.log(data);
+  // }, [data])
 
   return (
     <Context.Provider
