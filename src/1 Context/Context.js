@@ -7,21 +7,20 @@ const Context = createContext();
 function ContextProvider(props) {
 
   const [data, setData] = useState(null);
-
-  useEffect(()=> {
-    axios.get('http://localhost:8000/resources')
-      .then( res => {
-       setData(res.data);
-      })
-  }, [])
+  const [userAccount, setUserAccount] = useState(null);
 
   // useEffect(()=> {
-  //   console.log(data);
-  // }, [data])
+  //   axios.get('http://localhost:8000/resources')
+  //     .then( res => {
+  //      setData(res.data);
+  //     })
+  // }, [])
+
+
 
   return (
     <Context.Provider
-      value={{data}}
+      value={{data, userAccount, setUserAccount}}
     >
       { props.children }
     </Context.Provider>
