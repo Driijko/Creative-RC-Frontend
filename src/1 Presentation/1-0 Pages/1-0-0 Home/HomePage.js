@@ -1,15 +1,19 @@
 import React from 'react';
 
-import {WelcomeSection} from './WelcomeSection';
-import {TitleContainer} from './TitleContainer';
-import {TitleSection} from './TitleSection';
-import {AboutSection} from './AboutSection';
-import {AboutContainer} from './AboutContainer';
-import {OptionSection} from './OptionsSection';
-import {OptionsPrompt} from './OptionsPrompt';
-import {OptionRow} from './OptionRow';
-import {OptionButton} from './OptionButton';
-import {RecurseSection} from './RecurseSection';
+// Import Cross-Page Components
+import UserAccountButton from '../../1-1 Cross-Page/User Account Button/UserAccountButton';
+
+// Import Page-Specific Styled Components
+import {WelcomeSection} from './Styled Components/WelcomeSection';
+import {TitleContainer} from './Styled Components/TitleContainer';
+import {TitleSection} from './Styled Components/TitleSection';
+import {AboutSection} from './Styled Components/AboutSection';
+import {AboutContainer} from './Styled Components/AboutContainer';
+import {OptionSection} from './Styled Components/OptionsSection';
+import {OptionsPrompt} from './Styled Components/OptionsPrompt';
+import {OptionRow} from './Styled Components/OptionRow';
+import {OptionButton} from './Styled Components/OptionButton';
+import {RecurseSection} from './Styled Components/RecurseSection';
 
 export default function HomePage(props) {
   return (
@@ -56,6 +60,14 @@ export default function HomePage(props) {
         <a href="https://www.recurse.com/" target="_blank">
           <OptionButton>Recurse Center</OptionButton>
         </a>
+      </OptionRow>
+
+      <RecurseSection>
+        If you are a member of the RC community feel free to...
+      </RecurseSection>
+
+      <OptionRow>
+        <UserAccountButton>Log In</UserAccountButton>
       </OptionRow>
 
     </div>

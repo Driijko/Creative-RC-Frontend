@@ -6,6 +6,7 @@ const Context = createContext();
 
 function ContextProvider(props) {
 
+  const [mode, setMode] = useState("home");
   const [data, setData] = useState(null);
   const [userAccount, setUserAccount] = useState(null);
 
@@ -20,7 +21,7 @@ function ContextProvider(props) {
 
   return (
     <Context.Provider
-      value={{data, userAccount, setUserAccount}}
+      value={{data, userAccount, setUserAccount, mode, setMode}}
     >
       { props.children }
     </Context.Provider>

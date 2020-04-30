@@ -1,8 +1,9 @@
 import React, {useContext, useEffect} from 'react';
 
-import Context from '../../1 Context/Context';
+import Context from '../../../0 Control/0-1 Context/Context';
 
-import TagMenuSystem from '../6 Tags Menu System/TagMenuSystem';
+// Import cross-page components.
+import TagMenuSystem from '../../1-1 Cross-Page/Tags Menu System/TagMenuSystem';
 
 // Styled Components
 import {TitleSection} from './Styled Components/TitleSection';

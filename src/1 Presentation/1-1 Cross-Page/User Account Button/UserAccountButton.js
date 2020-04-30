@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import axios from 'axios';
 
-import Context from '../../1 Context/Context';
+import Context from '../../../0 Control/0-1 Context/Context';
 
 import {UserAccountButtonStyle} from './Styled Components/UserAccountButtonStyle';
 
@@ -11,7 +11,7 @@ export default function UserAccountButton(props) {
   function handleClick(e) {
     axios.get("http://localhost:8000/login")
       .then( res => {
-        //
+        console.log(res);
       })
   }
 

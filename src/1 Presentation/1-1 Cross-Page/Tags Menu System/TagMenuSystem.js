@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 
-import Context from '../../1 Context/Context';
+import Context from '../../../0 Control/0-1 Context/Context';
 
 import {TagMenuContainer} from './Styled Components/TagMenuContainer';
 import {TagColumnContainer} from './Styled Components/TagColumnContainer';

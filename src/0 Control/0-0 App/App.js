@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import {ContextProvider} from '../1 Context/Context';
-import Mode from '../2 Mode/Mode';
+import {ContextProvider} from '../0-1 Context/Context';
+import Mode from '../0-2 Mode/Mode';
 
 function App() {
   return (
