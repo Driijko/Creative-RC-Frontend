@@ -6,7 +6,7 @@ const Context = createContext();
 
 function ContextProvider(props) {
 
-  const [mode, setMode] = useState("home");
+  const [mode, setMode] = useState("main edit");
   const [data, setData] = useState(null);
   const [userAccount, setUserAccount] = useState(null);
 
@@ -16,6 +16,14 @@ function ContextProvider(props) {
   //      setData(res.data);
   //     })
   // }, [])
+
+  useEffect(()=> {
+    axios.get('http://localhost:8000/login')
+      .then( res => {
+       setUserAccount(res.data);
+       console.log(res.data);
+      })
+  }, [])
 
 
 

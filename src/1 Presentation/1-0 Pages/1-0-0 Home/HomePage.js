@@ -19,6 +19,10 @@ export default function HomePage(props) {
   return (
     <div>
 
+      <OptionRow>
+        <UserAccountButton>Log In</UserAccountButton>
+      </OptionRow>
+
       <WelcomeSection>
 
         <TitleContainer>

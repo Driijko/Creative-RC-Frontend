@@ -8,7 +8,7 @@ import TagMenuSystem from '../../1-1 Cross-Page/Tags Menu System/TagMenuSystem';
 // Styled Components
 import {TitleSection} from './Styled Components/TitleSection';
 
-export default function ResourcesPage(props) {
+export default function ToolssPage(props) {
 
   const {data} = useContext(Context);
 
