@@ -10,6 +10,7 @@ export const MainEditButton = styled.div`
     color: ${props.color0};
     background-color: ${props.color1} ;
     cursor: pointer;
+    font-family: Fascinate;
     font-size: ${responsive("biggest", 1920, 2, 4)}vmax;
   `}
 `

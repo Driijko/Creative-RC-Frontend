@@ -21,7 +21,6 @@ function ContextProvider(props) {
     axios.get('http://localhost:8000/login')
       .then( res => {
        setUserAccount(res.data);
-       console.log(res.data);
       })
   }, [])
 

@@ -7,12 +7,51 @@ import Navbar from '../../1-1 Cross-Page/Navbar/Navbar';
 import {Greeting} from "./Styled Components/Greeting";
 import {MainEditRow} from './Styled Components/MainEditRow';
 import {MainEditButton} from './Styled Components/MainEditButton';
+import {ProjectList} from './Styled Components/ProjectList';
+import {ProjectListing} from "./Styled Components/ProjectListing";
+import {ProjectTitle} from "./Styled Components/ProjectTitle";
+import {Checkbox} from "./Styled Components/Checkbox";
 
 
 
 export default function MainEditPage(props) {
 
   const {userAccount, setUserAccount, setMode} = useContext(Context);
+  const [projects, setProjects] = useState(null);
+
+  // If the user account data is loaded, we set up a projects list.
+  useEffect(()=> {
+    if (userAccount) {
+      const projectList = [];
+      for(let i = 0; i < userAccount.projects.length; i++) {
+        projectList[i] = (
+          <ProjectListing key={i}>
+            <Checkbox />
+            <ProjectTitle>{`${userAccount.projects[i].name}`}</ProjectTitle>
+          </ProjectListing>
+        )
+      }
+      setProjects(projectList);
+    }
+  },[userAccount]);
+
+  function handleClick(e) {
+    if (e.target.id === "editProfile") {
+      setMode("edit profile");
+    }
+    else if (e.target.id === "deleteProfile") {
+
+    }  
+    else if (e.target.id === "addProject") {
+
+    }
+    else if (e.target.id === "editProject") {
+
+    }
+    else if (e.target.id === "deleteProject") {
+
+    }
+  }
 
   return(
     <div>
@@ -22,16 +61,20 @@ export default function MainEditPage(props) {
         <div>
           <Greeting>{`Hey there, ${userAccount.firstName}!`}</Greeting>
           <MainEditRow>
-            <MainEditButton color0="magenta" color1={`hsl(255, 100%, 20%)`}>Edit Profile</MainEditButton>
-            <MainEditButton color0="magenta" color1={`hsl(255, 100%, 20%)`}>Delete Profile</MainEditButton>
+            <MainEditButton id="editProfile" onClick={handleClick} color0="magenta" color1={`hsl(255, 100%, 20%)`}>Edit Profile</MainEditButton>
+            <MainEditButton id="deleteProfile" color0="magenta" color1={`hsl(255, 100%, 20%)`}>Delete Profile</MainEditButton>
           </MainEditRow>
           <hr/>
           <MainEditRow>
-            <MainEditButton color0="red" color1={`hsl(30, 100%, 10%)`}>Add a Project</MainEditButton>
-            <MainEditButton color0="red" color1={`hsl(30, 100%, 10%)`}>Edit a Project</MainEditButton>
-            <MainEditButton color0="red" color1={`hsl(30, 100%, 10%)`}>Delete a Project</MainEditButton>
+            <MainEditButton id="addProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Add a Project</MainEditButton>
+            <MainEditButton id="editProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Edit a Project</MainEditButton>
+            <MainEditButton id="deleteProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Delete a Project</MainEditButton>
           </MainEditRow> 
-          <hr/>         
+          <hr/>
+          <ProjectList>
+            {projects}
+          </ProjectList>
+       
         </div>
         
         :"No Account"

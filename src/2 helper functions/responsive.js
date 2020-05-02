@@ -45,7 +45,5 @@ export default function responsive(dimension, maxDimensionSize, minSize, maxSize
   else {
     dim = window.innerHeight;
   }
-  const outcome = mapRange("inverse", dim, 320, maxDimensionSize, minSize, maxSize);
-  console.log(outcome);
-  return outcome;
+  return mapRange("inverse", dim, 320, maxDimensionSize, minSize, maxSize);
 }
