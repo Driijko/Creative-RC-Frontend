@@ -6,7 +6,7 @@ const Context = createContext();
 
 function ContextProvider(props) {
 
-  const [mode, setMode] = useState("main edit");
+  const [mode, setMode] = useState("edit profile");
   const [data, setData] = useState(null);
   const [userAccount, setUserAccount] = useState(null);
 

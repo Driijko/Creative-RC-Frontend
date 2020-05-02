@@ -7,14 +7,14 @@ export default function EditProfilePage(props) {
   const {userAccount} = useContext(Context);
   const [profileLinks, setProfileLinks] = useState(null);
 
+  // Set up a list of profile links. 
   useEffect(()=> {
     if(userAccount) {
       const profileLinks = [];
       for(let i = 0; i < userAccount.profileLinks.length; i++) {
         profileLinks[i] = (
-          <div>
+          <div key={i}>
             <input 
-              key={i}
               type="text" 
               id="profile link" 
               name="profile link" 
@@ -24,12 +24,28 @@ export default function EditProfilePage(props) {
             <br/>
             <br/>
           </div>
-
         )
       }
       setProfileLinks(profileLinks);
     }
   },[userAccount]);
+
+  function handleClick(e) {
+    if (e.target.id === "addProfile") {
+      const newLink = (
+        <div key={profileLinks.length}>
+          <input           
+            type="text"
+            id="profile link"
+            style={{width: "300px"}} 
+          />
+          <br/>
+          <br/>
+        </div>
+      )
+      setProfileLinks(profileLinks.concat(newLink));
+    }
+  }
 
   return (
     <div>
@@ -77,7 +93,13 @@ export default function EditProfilePage(props) {
           <div>Profile Links: This is to link to other profiles, like Github, LinkedIn, a personal website, Instagram, your email, etc.</div> 
           <br/>
           {profileLinks}
-          <input style={{cursor: "pointer"}} type="button" id="addProfile" name="addProfile" value="+ Add a profile link" />
+          <input
+            onClick={handleClick} 
+            style={{cursor: "pointer"}} 
+            type="button" 
+            id="addProfile" 
+            name="addProfile" 
+            value="+ Add a profile link" />
         </div>
         <br/>
         <br/>
