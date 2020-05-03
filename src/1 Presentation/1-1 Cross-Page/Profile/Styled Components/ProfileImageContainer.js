@@ -1,8 +1,12 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const ProfileImageContainer = styled.div`
-  border: 2px solid purple;
-  width: 50%;
-  height: 10vmax;
-  display: flex;
+  ${props=> css`
+    width: ${window.innerWidth/3}px;
+    height: ${window.innerWidth/3}px;
+    border: 4vmax solid ${props.color};
+    display: flex;
+    margin: 3vmax;  
+  `}
+
 `

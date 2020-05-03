@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const ProjectsSectionDivider = styled.div`
-  text-align: center;
+  ${props=> css`
+    text-align: center;
+    font-family: ${props.font};
+    color: ${props.color}; 
+  `}
+
 `

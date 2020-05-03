@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const ProfileTopTextSection = styled.div`
+  margin-left: 1vw;
   display: flex;
   flex-direction: column;
-  border: 3px solid green;
+  justify-content: space-between;
+  padding: 3vmax;
 `

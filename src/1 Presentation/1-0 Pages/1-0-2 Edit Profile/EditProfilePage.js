@@ -22,12 +22,21 @@ export default function EditProfilePage(props) {
       for(let i = 0; i < userAccount.profileLinks.length; i++) {
         profileLinks[i] = (
           <div key={i}>
+            <label>Link: </label>
             <input 
               type="text" 
               id="profile link" 
               name="profile link" 
-              value={`${userAccount.profileLinks[i]}`}
-              style={{width: "300px"}}>
+              value={`${userAccount.profileLinks[i][1]}`}
+              style={{width: "280px"}}>
+            </input>
+            <label>Text: </label>
+            <input
+              type="text"
+              id="profile link text"
+              name="profile link text"
+              value={`${userAccount.profileLinks[i][0]}`}
+              style={{width: "280px"}}>
             </input>
             <br/>
             <br/>
@@ -59,7 +68,7 @@ export default function EditProfilePage(props) {
     <div>
     { userAccount ?
       <PageContainer>
-        <form style={{border: "3px solid green"}}>
+        <form style={{border: "3px solid green", marginBottom: "5vh"}}>
 
           <div>
             <input style={{fontSize: "25px", cursor: "pointer"}} type="button" id="save" name="save" value="SAVE PROFILE CHANGES" />
@@ -110,8 +119,7 @@ export default function EditProfilePage(props) {
           <br/>
 
           <div>
-            <div>Profile Links: This is to link to other profiles, like Github,</div> 
-            <div>LinkedIn, a personal website, Instagram, your email, etc.</div>
+            <div>Profile Links: This is to link to other profiles, like Github, LinkedIn, a personal website, Instagram, your email, etc.</div>
             <br/>
             {profileLinks}
             <input
@@ -126,70 +134,18 @@ export default function EditProfilePage(props) {
           <br/>
 
           <div>
-            <label for="nameFont">Name Font: </label>
-            <select id="nameFont" name="nameFont" value={`${userAccount.fonts[0]}`}>
-              <option value="Arial">Arial</option>
-              <option value="Dr+Sugiyama">Dr. Sugiyama</option>
-              <option value="Fascinate">Fascinate</option>
-              <option value="Fredoka One">Fredoka One</option>
-              <option value="Josefin Slab">Josefin Slab</option>
-              <option value="Poiret One">Poiret One</option>
-              <option value="Monoton">Monoton</option>
-              <option value="Righteous">Righteous</option>
-              {/* <option value=""></option> */}
-              {/* <option value=""></option> */}             
-            </select>
-            <br/>
-            <br/>
-            <label for="nameFont">Stats Font: </label>
-            <select id="nameFont" name="nameFont" value={`${userAccount.fonts[1]}`}>
-              <option value="Arial">Arial</option>
-              <option value="Dr+Sugiyama">Dr. Sugiyama</option>
-              <option value="Fascinate">Fascinate</option>
-              <option value="Fredoka One">Fredoka One</option>
-              <option value="Josefin Slab">Josefin Slab</option>
-              <option value="Poiret One">Poiret One</option>
-              <option value="Monoton">Monoton</option>
-              <option value="Righteous">Righteous</option>
-              {/* <option value=""></option> */}
-              {/* <option value=""></option> */}             
-            </select>
-            <br/>
-            <br/>
-            <label for="nameFont">Description Font: </label>
-            <select id="nameFont" name="nameFont" value={`${userAccount.fonts[2]}`}>
-              <option value="Arial">Arial</option>
-              <option value="Dr+Sugiyama">Dr. Sugiyama</option>
-              <option value="Fascinate">Fascinate</option>
-              <option value="Fredoka One">Fredoka One</option>
-              <option value="Josefin Slab">Josefin Slab</option>
-              <option value="Poiret One">Poiret One</option>
-              <option value="Monoton">Monoton</option>
-              <option value="Righteous">Righteous</option>
-              {/* <option value=""></option> */}
-              {/* <option value=""></option> */}             
-            </select>
-            <br/>
-            <br/>
-            <label for="nameFont">Links Font: </label>
-            <select id="nameFont" name="nameFont" value={`${userAccount.fonts[3]}`}>
-              <option value="Arial">Arial</option>
-              <option value="Dr+Sugiyama">Dr. Sugiyama</option>
-              <option value="Fascinate">Fascinate</option>
-              <option value="Fredoka One">Fredoka One</option>
-              <option value="Josefin Slab">Josefin Slab</option>
-              <option value="Poiret One">Poiret One</option>
-              <option value="Monoton">Monoton</option>
-              <option value="Righteous">Righteous</option>
-              {/* <option value=""></option> */}
-              {/* <option value=""></option> */}             
-            </select>
-            <br/>
-            <br/>
-            <label for="nameFont">Color Theme: </label>
-            <select id="nameFont" name="nameFont" value={`${userAccount.theme}`}>
+            <label for="colorTheme">Color Theme: </label>
+            <select id="colorTheme" name="colorTheme" value={`${userAccount.colorTheme}`}>
               <option value="Fruit Basket">Fruit Basket</option> 
               <option value="Lazy Summer Day">Lazy Summer Day</option>
+            </select>
+          </div>
+          <br/>
+          <div>
+            <label for="fontTheme">Font Theme: </label>
+            <select id="fontTheme" name="fontTheme" value={`${userAccount.fontTheme}`}>
+              <option value="Professor">Professor</option> 
+              <option value="Well Actually">Well Actually</option>
             </select>
           </div>
           <br/>
