@@ -64,13 +64,13 @@ export default function MainEditPage(props) {
             <MainEditButton id="editProfile" onClick={handleClick} color0="magenta" color1={`hsl(255, 100%, 20%)`}>Edit Profile</MainEditButton>
             <MainEditButton id="deleteProfile" color0="magenta" color1={`hsl(255, 100%, 20%)`}>Delete Profile</MainEditButton>
           </MainEditRow>
-          <hr/>
+          <hr style={{border: "1px solid white"}}/>
           <MainEditRow>
-            <MainEditButton id="addProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Add a Project</MainEditButton>
-            <MainEditButton id="editProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Edit a Project</MainEditButton>
-            <MainEditButton id="deleteProject" color0="red" color1={`hsl(30, 100%, 10%)`}>Delete a Project</MainEditButton>
+            <MainEditButton id="addProject" color0={`hsl(300, 100%, 50%)`} color1={`hsl(30, 100%, 65%)`}>Add a Project</MainEditButton>
+            <MainEditButton id="editProject" color0={`hsl(300, 100%, 50%)`} color1={`hsl(30, 100%, 65%)`}>Edit a Project</MainEditButton>
+            <MainEditButton id="deleteProject" color0={`hsl(300, 100%, 50%)`} color1={`hsl(30, 100%, 65%)`}>Delete a Project</MainEditButton>
           </MainEditRow> 
-          <hr/>
+          <hr style={{border: "1px solid white"}}/>
           <ProjectList>
             {projects}
           </ProjectList>
