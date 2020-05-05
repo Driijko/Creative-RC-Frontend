@@ -30,6 +30,26 @@
 <br/>
 <br/>
 <br/>
+<h3>Chloe Revery</h3>
+<h5>
+  <a href="https://github.com/chloerevery/BelleAbsenteBot" target="_blank">Belle Absente Bot</a>
+</h5>
+<br/>
+<br/>
+<br/>
+<h3>Jesse Chen</h3>
+<h5>
+  <a href="https://jessechen.github.io/drowzee/drowzee.html" target="_blank">Hypnodots</a>
+</h5>
+<h5>
+  <a href="https://jessechen.github.io/polypile/polypile.html" target="_blank">Star Pattern Mosaics</a>
+</h5>
+<h5>
+  <a href="https://jessechen.github.io/hilbertime/hilbertime.html" target="_blank">Space Filling Clock</a>
+</h5>
+<br/>
+<br/>
+<br/>
 <h2>TOOLS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h2>
 <br/>
 <h4>A list of libraries and articles for those interested in creative coding with JS, including audio, visual, VR, text-based, etc.</h4>
@@ -59,6 +79,12 @@
   <a href="https://mapbox.com/" target="_blank">Mapbox</a>
 </h5>
 <br/>
+<h4>Applied Poetics is a resource for writing literature using natural language processing techniques.</h4> 
+<h5>
+  <a href="https://www.appliedpoetics.org/" target="_blank">Applied Poetics</a>
+</h5>
+<br/>
+
 <h4>Are.na is a place to share your work and find work to inspire you.</h4> 
 <h5>
   <a href="https://www.are.na/" target="_blank">Are.na</a>
