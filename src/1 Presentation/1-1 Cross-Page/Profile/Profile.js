@@ -3,10 +3,12 @@ import React, {useState, useEffect} from 'react';
 import {ProfileContainer} from "./Styled Components/ProfileContainer";
 import {ProfileTop} from "./Styled Components/ProfileTop";
 import {ProfileImageContainer} from "./Styled Components/ProfileImageContainer";
+import {ImageOverlay} from "./Styled Components/ImageOverlay";
 import {ProfileTopTextSection} from "./Styled Components/ProfileTopTextSection";
 import {Name} from "./Styled Components/Name";
 import {Stats} from "./Styled Components/Stats";
 import {Link} from "./Styled Components/Link";
+import {DescriptionContainer} from "./Styled Components/DescriptionContainer";
 import {ProjectsSectionDivider} from "./Styled Components/ProjectsSectionDivider";
 import {fontThemes} from "../Themes/fontThemes";
 import {colorThemes} from "../Themes/colorThemes";
@@ -21,7 +23,7 @@ export default function Profile(props) {
     const links = [];
     for (let i = 0; i < props.profile.profileLinks.length; i++) {
       links[i] = (
-        <Link key={i} font={fontThemes[props.profile.fontTheme][3]} color={colorThemes[props.profile.colorTheme][4]}>
+        <Link key={i} color={colorThemes[props.profile.colorTheme][3]} font={fontThemes[props.profile.fontTheme][2]}>
           <a href={`${props.profile.profileLinks[i]}`} 
           style={{textDecoration: "none", color: `${colorThemes[props.profile.colorTheme][3]}`}}>
             {`${props.profile.profileLinks[i][0]}`}
@@ -33,13 +35,14 @@ export default function Profile(props) {
   },[])
 
   return (
-    <ProfileContainer color={colorThemes[props.profile.colorTheme][0]}>
+    <ProfileContainer backColor={colorThemes[props.profile.colorTheme][1]} borderColor={colorThemes[props.profile.colorTheme][0]}>
       <ProfileTop>
-        <ProfileImageContainer color={colorThemes[props.profile.colorTheme][1]}>
+        <ProfileImageContainer color={colorThemes[props.profile.colorTheme][0]}>
+          <ImageOverlay color={colorThemes[props.profile.colorTheme][2]}/>
           <img src={tempPic} style={{objectFit: "cover"}} />
         </ProfileImageContainer>
         <ProfileTopTextSection>
-          <Name color={colorThemes[props.profile.colorTheme][2]} font={fontThemes[props.profile.fontTheme][0]}>{`${props.profile.firstName} ${props.profile.lastName}`}</Name>
+          <Name color={colorThemes[props.profile.colorTheme][3]} font={fontThemes[props.profile.fontTheme][0]}>{`${props.profile.firstName} ${props.profile.lastName}`}</Name>
           <div>
             <Stats color={colorThemes[props.profile.colorTheme][3]} font={fontThemes[props.profile.fontTheme][1]}>{`${props.profile.pronouns}`}</Stats>
             <Stats color={colorThemes[props.profile.colorTheme][3]} font={fontThemes[props.profile.fontTheme][1]}>{`${props.profile.batch}`}</Stats>
@@ -49,14 +52,12 @@ export default function Profile(props) {
           </div>
         </ProfileTopTextSection>
       </ProfileTop>
-      <p style={{
-        padding: "5vw", 
-        marginTop: "3vh", 
-        textAlign: "center", 
-        fontFamily: `${fontThemes[props.profile.fontTheme][2]}`,
-        color: `${colorThemes[props.profile.colorTheme][5]}`
-      }}>{props.profile.description}</p>
-      <ProjectsSectionDivider color={colorThemes[props.profile.colorTheme][6]} font={fontThemes[props.profile.fontTheme[4]]}>PROJECTS</ProjectsSectionDivider>
+      <DescriptionContainer font={`${fontThemes[props.profile.fontTheme][3]}`} color={`${colorThemes[props.profile.colorTheme][3]}`}>
+        {props.profile.description}
+      </DescriptionContainer>
+      <hr style={{margin: "0px", marginTop: "2vh", border: `2px solid ${colorThemes[props.profile.colorTheme][0]}`}}/>
+      <ProjectsSectionDivider color={colorThemes[props.profile.colorTheme][3]} font={fontThemes[props.profile.fontTheme][4]}>PROJECTS</ProjectsSectionDivider>
+      <hr style={{margin: "0px", border: `2px solid ${colorThemes[props.profile.colorTheme][0]}`}}/>
     </ProfileContainer>
   )
 }

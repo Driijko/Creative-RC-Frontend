@@ -51,11 +51,19 @@ export default function EditProfilePage(props) {
     if (e.target.id === "addProfile") {
       const newLink = (
         <div key={profileLinks.length}>
+          <label>Link: </label>
           <input           
             type="text"
             id="profile link"
             style={{width: "300px"}} 
           />
+          <label>Text: </label>
+          <input
+            type="text"
+            id="profile link text"
+            name="profile link text"
+            style={{width: "280px"}}>
+          </input>
           <br/>
           <br/>
         </div>
@@ -68,7 +76,7 @@ export default function EditProfilePage(props) {
     <div>
     { userAccount ?
       <PageContainer>
-        <form style={{border: "3px solid green", marginBottom: "5vh"}}>
+        <form style={{display: "none", border: "3px solid green", marginBottom: "5vh"}}>
 
           <div>
             <input style={{fontSize: "25px", cursor: "pointer"}} type="button" id="save" name="save" value="SAVE PROFILE CHANGES" />
@@ -119,16 +127,19 @@ export default function EditProfilePage(props) {
           <br/>
 
           <div>
-            <div>Profile Links: This is to link to other profiles, like Github, LinkedIn, a personal website, Instagram, your email, etc.</div>
+            <div>Profile Links: This is to link to other profiles, like Github, LinkedIn, a personal website, Instagram, your email, etc. You can have up to 4 profile links.</div>
             <br/>
             {profileLinks}
-            <input
+            {profileLinks !== null && profileLinks.length < 4 ?
+              <input
               onClick={handleClick} 
               style={{cursor: "pointer"}} 
               type="button" 
               id="addProfile" 
               name="addProfile" 
               value="+ Add a profile link" />
+              :null
+            }
           </div>
           <br/>
           <br/>
