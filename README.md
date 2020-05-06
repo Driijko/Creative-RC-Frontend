@@ -18,7 +18,7 @@
 <br/>
 <h3>Danielle Hoo</h3>
 <h5>
-  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporwave Mahjong (w. Jesse Chen)</a>
+  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporjong (w. Jesse Chen)</a>
 </h5>
 <br/>
 <br/>
@@ -48,7 +48,7 @@
   <a href="https://jessechen.github.io/hilbertime/hilbertime.html" target="_blank">Space Filling Clock</a>
 </h5>
 <h5>
-  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporwave Mahjong (w. Danielle Hoo)</a>
+  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporjong (w. Danielle Hoo)</a>
 </h5>
 <br/>
 <br/>
