@@ -18,7 +18,7 @@
 <br/>
 <h3>Danielle Hoo</h3>
 <h5>
-  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporwave Mahjong</a>
+  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporwave Mahjong (w. Jesse Chen)</a>
 </h5>
 <br/>
 <br/>
@@ -46,6 +46,16 @@
 </h5>
 <h5>
   <a href="https://jessechen.github.io/hilbertime/hilbertime.html" target="_blank">Space Filling Clock</a>
+</h5>
+<h5>
+  <a href="https://daniellehoo.com/vaporJong/vaporJong.html" target="_blank">Vaporwave Mahjong (w. Danielle Hoo)</a>
+</h5>
+<br/>
+<br/>
+<br/>
+<h3>Sam Lazarus</h3>
+<h5>
+  <a href="https://drive.google.com/file/d/1W3Jrcn63Q0T41C73gIn_uz3ZLJyJAoOM/view?usp=sharing" target="_blank">Hide and Goose Seek</a>
 </h5>
 <br/>
 <br/>
